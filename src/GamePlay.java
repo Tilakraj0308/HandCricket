@@ -32,11 +32,12 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener{
 		if(!play && init) {
 			g.drawString("Welcome!!" , 300 , 450);
 			g.drawString("Press Enter to start the game." , 200 , 500);
-			init = false;
 		}
 		if(play && !toss) {
 			g.drawString("Let's toss first!" , 300 , 450);
 			g.drawString("Press 'T' for tail and 'H' for heads:"  , 200 , 500);
+//			init = false;
+//			toss = true;
 		}
 		if(toss) {
 			if(t == 0)
@@ -51,7 +52,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener{
 				g.drawString("You won the toss!" , 310 , 500);
 				tosswon = 0;
 			}
-			toss = false;
+//			toss = false;
 		}
 		if(tosswon == 0) {
 			g.drawString("Click '0' for Batting and '1' for bowling:" , 300 , 450);
